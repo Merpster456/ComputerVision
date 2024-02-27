@@ -18,8 +18,10 @@ function TransformedImage = transformImage(InputImage,TransformMatrix,TransformT
 
     %takes min of the min and 1 for cases when the min is >1
     %rounds to create whole numbers for reshape
-    minx = round(min(min(cornersprime1(1,:)),1));
-    miny = round(min(min(cornersprime1(2,:)),1));
+    % minx = round(min(min(cornersprime1(1,:)),1));
+    % miny = round(min(min(cornersprime1(2,:)),1));
+    minx = 1;
+    miny = 1;
     maxx = round(max(cornersprime1(1,:)));
     maxy = round(max(cornersprime1(2,:)));
 
@@ -68,7 +70,7 @@ function TransformedImage = transformImage(InputImage,TransformMatrix,TransformT
     
     x = reshape( x', hprime, wprime );
     y = reshape( y', hprime, wprime );
-end
+
     %interpolate the image
     TransformedImage = interp2(InputImage, x, y );
 end

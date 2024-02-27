@@ -1,7 +1,7 @@
 % pts1: nx2, pts2: nx2
 function A_inliers = estimateTransformRansac(pts1,pts2)
 Nransac = 10000;
-t = 2;
+t = .5;
 
 n = size(pts1,1);
 

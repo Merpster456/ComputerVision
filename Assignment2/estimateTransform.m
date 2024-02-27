@@ -21,8 +21,6 @@ else
 end
 
 q = V(:,end);
-P
-U*S*V'-P
 
 % reshape q to get A
 % reshape would make A^T, so transpose it to get A
